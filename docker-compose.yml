@@ -20,4 +20,3 @@ services:
     build: ./client
     depends_on:
       - repo
-    command: bash -c "sleep 1000"

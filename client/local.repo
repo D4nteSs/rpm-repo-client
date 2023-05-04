@@ -1,4 +1,4 @@
-[local]
+[local-extras]
 name=Local RPM Repository
 baseurl=http://repo/extras/
 enabled=1

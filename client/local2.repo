@@ -1,5 +1,5 @@
-[local]
+[local-baseos]
 name=Local RPM Repository
-baseurl=http://10.0.0.2
+baseurl=http://repo/baseos/
 enabled=1
 gpgcheck=0
