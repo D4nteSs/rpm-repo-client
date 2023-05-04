@@ -1,0 +1,23 @@
+version: '3'
+services:
+  repo:
+    container_name: repo
+    build: ./repo
+    ports:
+      - "8880:80"
+        #volumes:
+        #  - ./repo/repos:/usr/share/nginx/repos
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://repo/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+
+  client:
+    container_name: client
+    build: ./client
+    depends_on:
+      - repo
+    command: bash -c "sleep 1000"

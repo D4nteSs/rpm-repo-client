@@ -1,0 +1,5 @@
+[local]
+name=Local RPM Repository
+baseurl=http://repo/extras/
+enabled=1
+gpgcheck=0

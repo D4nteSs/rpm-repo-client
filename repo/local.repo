@@ -1,0 +1,5 @@
+[local]
+name=Local RPM Repository
+baseurl=http://10.0.0.2
+enabled=1
+gpgcheck=0
