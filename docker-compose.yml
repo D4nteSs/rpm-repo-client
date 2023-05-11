@@ -5,15 +5,13 @@ services:
     build: ./repo
     ports:
       - "8880:80"
-        #volumes:
-        #  - ./repo/repos:/usr/share/nginx/repos
+    volumes:
+      - ./repos:/usr/share/nginx/repos
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://repo/"]
       interval: 30s
       timeout: 10s
       retries: 3
-    logging:
-      driver: "json-file"
 
   client:
     container_name: client

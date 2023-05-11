@@ -1,5 +1,5 @@
 [local-baseos]
 name=Local RPM Repository
-baseurl=http://repo/baseos/
+baseurl=http://repo/dnf/
 enabled=1
 gpgcheck=0
